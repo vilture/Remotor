@@ -1,6 +1,6 @@
 # Remotor
 
-Telegram-бот для добавления торрентов (magnet или `.torrent`) в **transmission-daemon** на том же сервере. Доступ только у пользователей из списка `ALLOWED_USER_IDS`.
+Telegram-бот для добавления торрентов (magnet или `.torrent`) в **transmission-daemon** . Доступ только у пользователей из списка `ALLOWED_USER_IDS`.
 
 ## Возможности
 
@@ -15,8 +15,6 @@ Telegram-бот для добавления торрентов (magnet или `.
 - Python 3.11+
 - [transmission-daemon](https://transmissionbt.com/) с RPC на `127.0.0.1`
 - Токен бота от [@BotFather](https://t.me/BotFather)
-
-На Ubuntu 24.04 (amd64/arm64):
 
 ```bash
 sudo apt update
