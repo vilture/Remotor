@@ -1,0 +1,12 @@
+.venv/
+.env
+.remotor.pid
+*.log
+remotor.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.db
+*.egg-info/
+dist/
+build/

@@ -1,0 +1,17 @@
+[Unit]
+Description=Remotor torrent bot
+After=network-online.target transmission-daemon.service
+Wants=network-online.target transmission-daemon.service
+
+[Service]
+Type=simple
+User=remotor
+Group=remotor
+WorkingDirectory=/opt/remotor
+EnvironmentFile=/opt/remotor/.env
+ExecStart=/opt/remotor/.venv/bin/python -m remotor
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

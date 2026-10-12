@@ -1,0 +1,15 @@
+[Unit]
+Description=Remotor Telegram torrent bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@ROOT@
+EnvironmentFile=@ROOT@/.env
+ExecStart=@ROOT@/.venv/bin/python -m remotor
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

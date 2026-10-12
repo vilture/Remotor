@@ -1,0 +1,26 @@
+[project]
+name = "remotor"
+version = "0.1.0"
+description = "Telegram-бот, который скачивает торренты через transmission-daemon"
+requires-python = ">=3.11"
+dependencies = [
+    "aiogram>=3.13,<4",
+    "transmission-rpc>=7,<8",
+    "aiosqlite>=0.20",
+    "pydantic-settings>=2.6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { remotor = "." }
+packages = ["remotor", "remotor.handlers"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
