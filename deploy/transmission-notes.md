@@ -1,6 +1,6 @@
-# Transmission на Ubuntu 24.04
+# Transmission на Ubuntu (deb)
 
-Пакеты `transmission-daemon` и `python3-venv` одинаковые для amd64 и arm64. В репозитории нет бинарников: бот на чистом Python и говорит с демоном по RPC `127.0.0.1`. Скрипт `download_torrent.sh` бот не вызывает.
+Необходимы пакеты `transmission-daemon` и `python3-venv`. В репозитории нет бинарников: бот на чистом Python и говорит с демоном по RPC `127.0.0.1`. Скрипт `download_torrent.sh` бот не вызывает.
 
 Демон работает от пользователя `debian-transmission` и сам пишет файлы. Бот только управляет им.
 
@@ -88,4 +88,4 @@ transmission-remote 127.0.0.1:9091 -t ID -i | grep -i announce
 
 Альтернатива без `.env`: в `settings.json` демона (демон **остановлен**) добавить `"proxy-url": "socks5h://…"` или поднять демон с переменными `ALL_PROXY` / `HTTPS_PROXY` (если `proxy-url` не задан).
 
-Прокси должен быть **ваш** (VPS, домашний сервер за границей, платный SOCKS). В репозиторий URL и пароли не коммитить.
+Прокси должен быть **ваш** (VPS, домашний сервер за границей, платный SOCKS). 
